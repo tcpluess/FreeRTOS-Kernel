@@ -1629,6 +1629,10 @@ configSTACK_DEPTH_TYPE uxTaskGetStackHighWaterMark2( TaskHandle_t xTask ) PRIVIL
 
 #endif
 
+#if ( configUSE_IDLE_HOOK == 1 )
+    extern void vApplicationIdleHook( void );
+#endif
+
 #if ( configCHECK_FOR_STACK_OVERFLOW > 0 )
 
 /**
